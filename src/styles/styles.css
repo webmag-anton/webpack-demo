@@ -1,0 +1,33 @@
+/* webpack не позволяет работать css c чистыми его импортами; он будет воспринимать такие импорты как 
+	 импорты в js и нормально с ними работать */
+/* для подключения библиотек из node_modules:  ~<packageName>  (normalize.css это имя пакета) */
+@import '~normalize.css';
+/* т.к. импортируется подключение файла .ttf, расширение которого webpack не понимает, то нужен file-loader */
+@import 'fonts.css';
+
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding-top: 2rem;
+}
+
+h1 {
+	text-align: center;
+}
+
+.logo {
+	width: 200px;
+	height: 220px;
+	margin: 0 auto;
+	background-image: url('../assets/webpack-logo.png');
+	background-size: cover;
+}
+
+pre {
+	color: crimson;
+}
