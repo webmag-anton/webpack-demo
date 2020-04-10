@@ -35,33 +35,33 @@
 
 Команды: 
 
-npx webpack             									запускает приложение {создает bundle.js}
-cross-env NODE_ENV=<mode>									устанавливает системному свойству NODE_ENV режим development или production
+npx webpack                                  запускает приложение {создает bundle.js}
+cross-env NODE_ENV='<mode>'                  устанавливает системному свойству NODE_ENV режим development или production
 
 
 
 Пакеты:
 
-webpack 																	корневой функционал webpack
-webpack-cli																отвечает за команды webpack, которые доступны в консоле
-html-webpack-plugin												меняет подключаемые пути и имена файлов и отправляет html в output 
-																					каталог; так же минифицирует html
-clean-webpack-plugin											очищает проект {./dist} от старых ненужных файлов {со старым [hash]}
-css-loader																позволяет понимать импорты css файлов в js и отправляет файл в output каталог
-style-loader 															добавляет стили в секцию <head> в html
-file-loader																преобразует import\require для файла {картинки, шрифты} в URL и отправляет 
-																					файл в output каталог
-webpack-dev-server												разворачивает локальный сервер с вотчингом файлов и автоперезагрузкой
-copy-webpack-plugin												копирует файл или папку в нужное место без обработки
-cross-env																	определяет в какой ОС мы находимя для установки системному свойству NODE_ENV
-																					режим development или production, которое используем в конфиге для настроек
-mini-css-extract-plugin										переименовывает css файл в output каталоге {dist} - как плагин, позволяет не
-																					перезагружать страницу при изменениях - как лоадер miniCssExtractPlugin.loader
-																					и добавляет стили в секцию <head> в html
-optimize-css-assets-webpack-plugin				минифицирует css 
-terser-webpack-plugin											минифицирует js 
-node-sass 																корневой функционал sass и scss
-sass-loader																для взаимодействия webpack и sass
-@babel'/'core 														корневой функционал babel
-babel-loader  														для взаимодействия webpack и babel
-webpack-bundle-analyzer										анализирует размер файлов и библиотек в приложении и воводит инфографику
+webpack                                      корневой функционал webpack
+webpack-cli                                  отвечает за команды webpack, которые доступны в консоле
+html-webpack-plugin                          меняет подключаемые пути и имена файлов и отправляет html в output 
+                                             каталог; так же минифицирует html
+clean-webpack-plugin                         очищает проект {./dist} от старых ненужных файлов {со старым [hash]}
+css-loader                                   позволяет понимать импорты css файлов в js и отправляет файл в output каталог
+style-loader                                 добавляет стили в секцию <head> в html
+file-loader                                  преобразует import\require для файла {картинки, шрифты} в URL и отправляет 
+                                             файл в output каталог
+webpack-dev-server                           разворачивает локальный сервер с вотчингом файлов и автоперезагрузкой
+copy-webpack-plugin                          копирует файл или папку в нужное место без обработки
+cross-env                                    определяет в какой ОС мы находимя для установки системному свойству NODE_ENV
+                                             режим development или production, которое используем в конфиге для настроек
+mini-css-extract-plugin                      переименовывает css файл в output каталоге {dist} - как плагин, позволяет не
+                                             перезагружать страницу при изменениях - как лоадер miniCssExtractPlugin.loader
+                                             и добавляет стили в секцию <head> в html
+optimize-css-assets-webpack-plugin           минифицирует css 
+terser-webpack-plugin                        минифицирует js 
+node-sass                                    корневой функционал sass и scss
+sass-loader                                  для взаимодействия webpack и sass
+@babel'/'core                                корневой функционал babel
+babel-loader                                 для взаимодействия webpack и babel
+webpack-bundle-analyzer                      анализирует размер файлов и библиотек в приложении и воводит инфографику
