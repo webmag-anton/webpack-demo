@@ -62,6 +62,9 @@ optimize-css-assets-webpack-plugin           минифицирует css
 terser-webpack-plugin                        минифицирует js 
 node-sass                                    корневой функционал sass и scss
 sass-loader                                  для взаимодействия webpack и sass
-@babel'/'core                                корневой функционал babel
+@babel/core                                  корневой функционал babel
 babel-loader                                 для взаимодействия webpack и babel
+@babel/preset-env                            preset-env включает преобразования для ES2015+
+@babel/polyfill                              для использования async/await
+@babel/plugin-proposal-class-properties      для понимания babel статических свойства/методы классов
 webpack-bundle-analyzer                      анализирует размер файлов и библиотек в приложении и воводит инфографику
