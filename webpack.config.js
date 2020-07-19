@@ -13,7 +13,7 @@ const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer')
 const isDev = process.env.NODE_ENV === 'development',
       isProd = !isDev
 
-// в режиме development безсмысленно использовать webpack-bundle-analyzer, только в режиме production, когда все оптимизировано
+// в режиме development бессмысленно использовать webpack-bundle-analyzer, только в режиме production, когда все оптимизировано
 const plugins = () => {
    // добавляем плагины здесь, функция вернет массив плагинов в поле plugins
    const base = [	// все плагины добавляются в массив плагинов как инстенсы
