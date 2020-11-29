@@ -24,7 +24,9 @@ webpack сам по себе может работать только с js фа
    --mode development
    --mode production
 
-по дефолту webpack работает в режиме production, если не указывать режим явно
+по дефолту webpack работает в режиме production, если не указывать режим явно с помощью ключа в скриптах; 
+в webpack.config.js указываем mode: 'development', что бы если не указан ключ, webpack запускался в 
+режиме разработки
 
 флаг --watch в поле scripts в package.json позволяет не выходить из процесса (ctrl+c выход) и 
 следить за изменением файлов 
@@ -69,7 +71,9 @@ html-webpack-plugin                          меняет подключаемы
                                              каталог; так же минифицирует html
 clean-webpack-plugin                         очищает проект {./dist} от старых ненужных файлов {со старым [hash]}
 css-loader                                   позволяет понимать импорты css файлов в js и отправляет файл в output каталог
-style-loader                                 добавляет стили в секцию <head> в html
+style-loader                                 вставляет inline стили в html тег <head>; поэтому мы его не используем, а 
+                                             исползуем MiniCssExtractPlugin, который ищет импорты стилей и превращает 
+                                             их в отдельный файл + автоматом подключает его в html
 file-loader                                  преобразует import\require для файла {картинки, шрифты} в URL и отправляет 
                                              файл в output каталог
 webpack-dev-server                           разворачивает локальный сервер с вотчингом файлов и автоперезагрузкой
@@ -78,16 +82,16 @@ cross-env                                    определяет в какой 
                                              переменной NODE_ENV, указывающей режим разработки development или production;
                                              для этого в package.json при запуске скрипта указываем значение NODE_ENV,
                                              например, cross-env NODE_ENV=development и в конфиге Webpack используем ее
-mini-css-extract-plugin                      переименовывает css файл в output каталоге {dist} - как плагин, позволяет не
-                                             перезагружать страницу при изменениях - как лоадер miniCssExtractPlugin.loader
-                                             и добавляет стили в секцию <head> в html
+mini-css-extract-plugin                      как плагин: ищет импорты стилей и превращает их в отдельный файл; 
+                                             как лоадер (miniCssExtractPlugin.loader): позволяет не перезагружать 
+                                             страницу при изменениях и добавляет стили в секцию <head> в html
 optimize-css-assets-webpack-plugin           минифицирует css 
 terser-webpack-plugin                        минифицирует js 
 node-sass                                    корневой функционал sass и scss
 sass-loader                                  для взаимодействия webpack и sass
 @babel/core                                  корневой функционал babel
 babel-loader                                 для взаимодействия webpack и babel
-@babel/preset-env                            preset-env включает преобразования для ES2015+
+@babel/preset-env                            preset-env включает преобразования для ES2015+ (все последние фишки)
 @babel/polyfill                              для использования async/await
 @babel/plugin-proposal-class-properties      для понимания babel статических свойства/методы классов
 webpack-bundle-analyzer                      анализирует размер файлов и библиотек в приложении и воводит инфографику
