@@ -24,9 +24,10 @@ webpack сам по себе может работать только с js фа
    --mode development
    --mode production
 
-по дефолту webpack работает в режиме production, если не указывать режим явно с помощью ключа в скриптах; 
-в webpack.config.js указываем mode: 'development', что бы если не указан ключ, webpack запускался в 
-режиме разработки
+по дефолту webpack работает в режиме production, если не указывать режим явно с помощью ключа 
+в скриптах в package.json; 
+в webpack.config.js указываем mode: 'development', что бы если не указан ключ в package.json, 
+webpack запускался в режиме разработки
 
 флаг --watch в поле scripts в package.json позволяет не выходить из процесса (ctrl+c выход) и 
 следить за изменением файлов 
