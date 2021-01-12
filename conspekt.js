@@ -92,7 +92,7 @@ node-sass                                    корневой функциона
 sass-loader                                  для взаимодействия webpack и sass
 @babel/core                                  корневой функционал babel
 babel-loader                                 для взаимодействия webpack и babel
-@babel/preset-env                            preset-env включает преобразования для ES2015+ (все последние фишки)
+@babel/preset-env                            preset-env включает все плагины для преобразования ES2015+ в ES5
 @babel/polyfill                              для использования async/await (полифилы устанавливаются в dependencies)
-@babel/plugin-proposal-class-properties      для понимания babel статических свойства/методы классов
+@babel/plugin-proposal-class-properties      плагин для транспиляции статических свойств/методов класса
 webpack-bundle-analyzer                      анализирует размер файлов и библиотек в приложении и воводит инфографику
